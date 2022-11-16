@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        FindThePrize game = FindThePrize.init(4 , 4, 5);
+        FindThePrize game = FindThePrize.init(10 , 4, 5);
         List<Integer> guesses = new ArrayList<>(
                 Arrays.asList(1, 1, 2, 1, 1));
         int points = game.playGame(guesses);
