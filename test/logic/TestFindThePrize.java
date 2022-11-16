@@ -19,56 +19,56 @@ public class TestFindThePrize {
     @Test
     public void testClass1() {
     	try {
-			FindThePrize game = FindThePrize.init(-1, -1, -1);
-			assertEquals(1, 0);
+		FindThePrize game = FindThePrize.init(-1, -1, -1);
+		assertEquals(1, 0);
     	} catch (Exception e) {
-			assertEquals(1, 1);
-		}	
+		assertEquals(1, 1);
+	}	
     }
     @Test
     public void testClass2() {
     	try {
-			FindThePrize game = FindThePrize.init(-1, 2, 2);
-			assertEquals(1, 0);
+		FindThePrize game = FindThePrize.init(-1, 2, 2);
+		assertEquals(1, 0);
     	} catch (Exception e) {
-			assertEquals(1, 1);
-		}	
+		assertEquals(1, 1);
+	}	
     }
     @Test
     public void testClass3() {
     	try {
-			FindThePrize game = FindThePrize.init(2, -1, 2);
-			assertEquals(1, 0);
+		FindThePrize game = FindThePrize.init(2, -1, 2);
+		assertEquals(1, 0);
     	} catch (Exception e) {
-			assertEquals(1, 1);
-		}	
+		assertEquals(1, 1);
+	}	
     }
     @Test
     public void testClass4() {
     	try {
-			FindThePrize game = FindThePrize.init(2, 2, -1);
-			assertEquals(1, 0);
+		FindThePrize game = FindThePrize.init(2, 2, -1);
+		assertEquals(1, 0);
     	} catch (Exception e) {
-			assertEquals(1, 1);
-		}	
+		assertEquals(1, 1);
+	}	
     }
     @Test
     public void testClass5() {
     	try {
-			FindThePrize game = FindThePrize.init(1, 2, 2);
-			assertEquals(1, 0);
+		FindThePrize game = FindThePrize.init(1, 2, 2);
+		assertEquals(1, 0);
     	} catch (Exception e) {
-			assertEquals(1, 1);
-		}
+		assertEquals(1, 1);
+	}
     }
     @Test
     public void testClass6() {
     	try {
-			FindThePrize game = FindThePrize.init(2, 2, 2);
-			assertEquals(1, 1);
-		} catch (Exception e) {
-			assertEquals(1, 0);
-		}
+		FindThePrize game = FindThePrize.init(2, 2, 2);
+		assertEquals(1, 1);
+	} catch (Exception e) {
+		assertEquals(1, 0);
+	}
     }
     
     @Test
@@ -88,45 +88,41 @@ public class TestFindThePrize {
     public void testGuessFunc1() {
     	FindThePrize game = FindThePrize.init(2 , 2, 2);
     	try {
-			game.guess(-1);
-			assertEquals(1, 0);
-		} catch (Exception e) {
-			assertEquals(1, 1);
-		}
-    	
+		game.guess(-1);
+		assertEquals(1, 0);
+	} catch (Exception e) {
+		assertEquals(1, 1);
+	}
     }
     @Test
     public void testGuessFunc2() {
     	FindThePrize game = FindThePrize.init(2 , 2, 2);
     	try {
-			game.guess(0);
-			assertEquals(1, 0);
-		} catch (Exception e) {
-			assertEquals(1, 1);
-		}
-    	
+                game.guess(0);
+                assertEquals(1, 0);
+	} catch (Exception e) {
+		assertEquals(1, 1);
+	}
     }
     @Test
     public void testGuessFunc3() {
     	FindThePrize game = FindThePrize.init(2 , 2, 2);
     	try {
-			game.guess(game.getNumberOfOptions()+1);
-			assertEquals(1, 0);
-		} catch (Exception e) {
-			assertEquals(1, 1);
-		}
-    	
+		game.guess(game.getNumberOfOptions()+1);
+		assertEquals(1, 0);
+	} catch (Exception e) {
+		assertEquals(1, 1);
+	}
     }
     @Test
     public void testGuessFunc4() {
     	FindThePrize game = FindThePrize.init(2 , 2, 2);
     	try {
-			game.guess(game.getNumberOfOptions());
-			assertEquals(1, 1);
-		} catch (Exception e) {
-			assertEquals(1, 0);
-		}
-    	
+		game.guess(game.getNumberOfOptions());
+		assertEquals(1, 1);
+	} catch (Exception e) {
+		assertEquals(1, 0);
+	}
     }
     
     @Test
@@ -141,7 +137,6 @@ public class TestFindThePrize {
         FindThePrize game = FindThePrize.init(1, 1, 1);
         assertTrue(game.playRound(1));
         assertEquals(1, game.getNumberOfPoints());
-        
     }
     
     @Test
